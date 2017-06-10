@@ -5,16 +5,19 @@ import './main.html';
 
 
 Template.faqList.helpers({
-  query:function(){
-    return CallCenterQueries.find();
+  query: function(){
+    return CallCenterQueries.find({ Season: Session.get('season'), Sector:  Session.get('sector') });
   }
 });
 
 Template.faqList.events({
-  'click #october':function(){
-    Router.go('queries', {season: 'KHARIF'});
+  'click #season':function(e){
+    e.preventDefault();
+    var season = $('#season').val();
+    Session.set('season', season);
   },
-  'click #december':function(){
-    Router.go('queries', {season: 'JAYAD'});
+  'click #sector':function(){
+    var sector = $('#sector').val();
+    Session.set('sector', sector);
   }
 });
