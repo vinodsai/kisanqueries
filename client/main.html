@@ -8,33 +8,41 @@
 
 <template name='faqList'>
   <div class="container">
-    <h3>Kisan queries for Gopalganj District</h3>
-    <h4>Get queries for</h4>
-    <div class="form-group">
-      <label class="control-label">Season</label>
-      <div class="selectContainer">
-          <select name="season" class="form-control" id='season'>
-              <option value="RABI">Rabi</option>
-              <option value="KHARIF">Kharif</option>
-              <option value="JAYAD">Jayad</option>
-          </select>
+    <h3 class='heading'>Kisan queries for Gopalganj District</h3>
+    <div class="row">
+      <div class="col-lg-8 col-md-8">
+        <h4>Get queries for</h4>
+        <div class="form-group">
+          <label class="control-label">Season</label>
+          <div class="selectContainer">
+              <select name="season" class="form-control" id='season'>
+                  <option value="RABI">Rabi</option>
+                  <option value="KHARIF">Kharif</option>
+                  <option value="JAYAD">Jayad</option>
+              </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Sector</label>
+          <div class="selectContainer">
+              <select name="sector" class="form-control" id='sector'>
+                  <option value="AGRICULTURE">Agriculture</option>
+                  <option value="HORTICULTURE">Horticulture</option>
+              </select>
+          </div>
+        </div>
+        {{#each query}}
+          <div class="panel panel-info">
+            <div class="panel-heading">{{QueryText}}</div>
+            <div class="panel-body">{{KCCAns}}</div>
+            <div class="panel-footer">{{Season}} under the sector {{Sector}}</div>
+          </div>
+        {{/each}}
       </div>
+      <div class="col-lg-4 col-md-4">
+        <h4>Statistics of Gopalganj District</h4>
+        {{> panels}}
+			</div>
     </div>
-    <div class="form-group">
-      <label class="control-label">Sector</label>
-      <div class="selectContainer">
-          <select name="sector" class="form-control" id='sector'>
-              <option value="AGRICULTURE">Agriculture</option>
-              <option value="HORTICULTURE">Horticulture</option>
-          </select>
-      </div>
-    </div>
-    {{#each query}}
-      <div class="panel panel-info">
-        <div class="panel-heading">{{QueryText}}</div>
-        <div class="panel-body">{{KCCAns}}</div>
-        <div class="panel-footer">{{Season}} under the sector {{Sector}}</div>
-      </div>
-    {{/each}}
   </div>
 </template>

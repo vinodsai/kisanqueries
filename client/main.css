@@ -1,4 +1,7 @@
 /* CSS declarations go here */
+.heading{
+  text-align: center;
+}
 .form-group{
   display: inline-block;
 }
