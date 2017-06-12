@@ -1,26 +1,32 @@
 <template name="panels">
-  <div class="panel panel-info">
-    <div class="panel-heading">
-      <h4>Total queries</h4>
-      <p><span class="huge">{{count}}</span></p>
+  <div class="panel-queries">
+    <h4>Statistics of Gopalganj District</h4>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4><a href={{pathFor 'queries'}} id='total'>Total queries</a></h4>
+        <p><span class="huge">{{count}}</span></p>
+      </div>
     </div>
-  </div>
-  <div class="panel panel-info">
-    <div class="panel-heading">
-      <h4>Total queries in Kharif</h4>
-      <p><span class="huge">{{countKharif}}</span></p>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4><a href={{pathFor 'queries-in-Kharif'}}>Total queries in Kharif</a></h4>
+        <p><span class="huge">{{countKharif}}</span></p>
+      </div>
     </div>
-  </div>
-  <div class="panel panel-info">
-    <div class="panel-heading">
-      <h4>Total queries in Jayad</h4>
-      <p><span class="huge">{{countJayad}}</span></p>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4><a href={{pathFor 'queries-in-Jayad'}}>Total queries in Jayad</a></h4>
+        <p><span class="huge">{{countJayad}}</span></p>
+      </div>
     </div>
-  </div>
-  <div class="panel panel-info">
-    <div class="panel-heading">
-      <h4>Total queries in Rabi</h4>
-      <p><span class="huge">{{countRabi}}</span></p>
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h4><a href={{pathFor 'queries-in-Rabi'}}>Total queries in Rabi</a></h4>
+        <p><span class="huge">{{countRabi}}</span></p>
+      </div>
+    </div>
+    <div>
+      <h4>bar chart goes here</h4>
     </div>
   </div>
 </template>

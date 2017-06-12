@@ -12,3 +12,8 @@ Template.panels.helpers({
     return CallCenterQueries.find({Season:'RABI'}).count();
   }
 });
+Template.panels.events({
+  'click #total':function(){
+    Router.go('queries');
+  },
+});
