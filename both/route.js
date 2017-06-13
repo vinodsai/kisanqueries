@@ -1,6 +1,6 @@
 Router.route('/',{
   name:'faqList'
-})
+});
 Router.route('/queries', {
   name:'queries'
 });

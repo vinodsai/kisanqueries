@@ -1,5 +1,6 @@
 <head>
   <title>farmer</title>
+
 </head>
 
 <body>
@@ -31,6 +32,7 @@
               </select>
           </div>
         </div>
+        <!-- {{#if equals}} -->
         {{#each query}}
           <div class="panel panel-info">
             <div class="panel-heading">{{QueryText}}</div>
@@ -38,6 +40,7 @@
             <div class="panel-footer">{{Season}} under the sector {{Sector}}</div>
           </div>
         {{/each}}
+        <!-- {{/if}} -->
       </div>
       <div class="col-lg-4 col-md-4">
         {{> panels}}

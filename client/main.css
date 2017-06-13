@@ -11,3 +11,7 @@
 .btn{
   display: inline;
 }
+#chartContainer{
+  width: 50%;
+  height:300px;
+}
