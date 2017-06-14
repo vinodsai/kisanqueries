@@ -11,7 +11,8 @@
 .btn{
   display: inline;
 }
-#chartContainer{
-  width: 50%;
-  height:300px;
+.map-container {
+  width: 800px;
+  max-width: 100%;
+  height: 300px;
 }
