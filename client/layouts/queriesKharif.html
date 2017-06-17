@@ -1,3 +1,85 @@
 <template name="queriesKharif">
-  <h3>template for KHARIF</h3>
+  <div class="container">
+    <div class='heading'><h3>Queries for Kharif Season</h3></div>
+    <div class="row">
+      <div class="col-lg-8 col-md-8">
+        <h4>Get queries for</h4>
+        <div class="form-group">
+          <label class="control-label">Sector</label>
+          <div class="selectContainer">
+              <select name="sector" class="form-control" id='sector'>
+                  <option value="AGRICULTURE">Agriculture</option>
+                  <option value="HORTICULTURE">Horticulture</option>
+              </select>
+          </div>
+        </div>
+        <!-- <div class="form-group">
+          <label class="control-label">Blockname</label>
+          <div class="selectContainer">
+              <select name="sector" class="form-control" id='blockname'>
+                  <option value="KATAIYA">Kataiya</option>
+                  <option value="KUCHAIKOTE">Kuchaikote</option>
+                  <option value="MANJHA">Manjha</option>
+                  <option value="BAIKUNTHPUR">Baikunthpur</option>
+                  <option value="GOPALGANJ">Gopalganj</option>
+                  <option value="HATUA">Hatua</option>
+                  <option value="PHULWARIYA">Phulwariya</option>
+                  <option value="BIJAIPUR">Bijaipur</option>
+                  <option value="SIDHWALIYA">Sidhwaliya</option>
+                  <option value="BHOREY">Bhorey</option>
+                  <option value="PANCHDEORI">Panchdeori</option>
+                  <option value="UCHKKAGAON">Uchkagaon</option>
+                  <option value="BARAULI">Barauli</option>
+                  <option value="THAWE">Thawe</option>
+              </select>
+          </div>
+        </div> -->
+        <div class="form-group">
+          <label class="control-label">Category</label>
+          <div class="selectContainer">
+              <select name="sector" class="form-control" id='category'>
+                  <option value="Vegetables">Vegetables</option>
+                  <option value="Cereals">Cereals</option>
+                  <option value="Fruits">Fruits</option>
+                  <option value="Sugar and Starch Crops">Sugar and Starch</option>
+                  <option value="Oilseeds">Oil Seeds</option>
+                  <option value="Pulses">Pulses</option>
+                  <option value="Condiments and Spices">Condiment and Spices</option>
+                  <option value="Others">Others</option>
+              </select>
+          </div>
+        </div>
+        <div class="result">
+          <div class="panel panel-info">
+            <div class="panel-heading">Found total {{result}} queries</div>
+          </div>
+        </div>
+        {{#each kharifQuery}}
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h5>Query: {{QueryText}}</h5>
+              <p>Solution: {{KCCAns}}</p>
+              <p>Category: {{Category}}</p>
+              <p>Season: {{Season}}</p>
+              <p>Sector: {{Sector}}</p>
+              <p>Blockname: {{BlockName}}</p>
+            </div>
+          </div>
+        {{/each}}
+
+      </div>
+
+      <div class="col-lg-4 col-md-4">
+        <h4>Information</h4>
+        <div class="panel panel-info">
+          <div class="panel-heading   kharifData">
+            <h5>Season: Kharif.</h5>
+            <h5>Sectors: Agriculture, Horticulture.</h5>
+            <h5>State Name: Bihar.</h5>
+            <h5>District Name: Goapalganj.</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>

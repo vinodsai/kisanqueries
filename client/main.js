@@ -12,12 +12,6 @@ Template.faqList.helpers({
     if(Session.get('season')==undefined || Session.get('sector')==undefined){
       return CallCenterQueries.find({ $or: [ { Season: Session.get('season') }, { Sector: Session.get('sector') } ] });
     }
-    // if(Session.get('season')!=undefined){
-    //   return CallCenterQueries.find({Sector:  Session.get('season')});
-    // }
-    // if(Session.get('season')==undefined){
-    //   return CallCenterQueries.find({Sector:  Session.get('sector')});
-    // }
     else{
       return CallCenterQueries.find({ Season: Session.get('season'), Sector:  Session.get('sector') });
     }

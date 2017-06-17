@@ -16,3 +16,7 @@
   max-width: 100%;
   height: 300px;
 }
+.kharifData h5{
+  font-style: italic;
+  color: lightslategrey;
+}

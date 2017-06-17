@@ -34,11 +34,16 @@
         </div>
         <!-- {{#if equals}} -->
         {{#each query}}
-          <div class="panel panel-info">
-            <div class="panel-heading">{{QueryText}}</div>
-            <div class="panel-body">{{KCCAns}}</div>
-            <div class="panel-footer">{{Season}} under the sector {{Sector}}</div>
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <h5>Query: {{QueryText}}</h5>
+            <p>Solution: {{KCCAns}}</p>
+            <p>Category: {{Category}}</p>
+            <p>Sector: {{Sector}}</p>
+            <p>Season: {{Season}}</p>
+            <p>Blockname: {{BlockName}}</p>
           </div>
+        </div>
         {{/each}}
         <!-- {{/if}} -->
       </div>

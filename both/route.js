@@ -1,9 +1,6 @@
 Router.route('/',{
   name:'faqList'
 });
-Router.route('/queries', {
-  name:'queries'
-});
 Router.route('/queries-in-Kharif', {
   name:'queries-in-Kharif',
   template:'queriesKharif'
