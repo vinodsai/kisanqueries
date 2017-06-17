@@ -1,3 +1,7 @@
+Template.queriesKharif.onRendered(function () {
+  Session.set('sector', undefined);
+  Session.set('category', undefined);
+});
 
 Template.queriesKharif.events({
   'change #sector':function(){

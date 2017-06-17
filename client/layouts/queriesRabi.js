@@ -1,4 +1,7 @@
-
+Template.queriesRabi.onRendered(function () {
+  Session.set('sector', undefined);
+  Session.set('category', undefined);
+});
 Template.queriesRabi.events({
   'change #sector':function(){
     var sector = $('#sector').val();

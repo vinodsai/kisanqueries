@@ -1,3 +1,7 @@
+Template.queriesJayad.onRendered(function () {
+  Session.set('sector', undefined);
+  Session.set('category', undefined);
+});
 
 Template.queriesJayad.events({
   'change #sector':function(){
